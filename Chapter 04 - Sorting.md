@@ -37,3 +37,12 @@ SelectionSort(A)
 		Delete-Minimum from A 
 	Return(Sort)
 ```
+- Performs n iterations, where the average iteration takes n/2 steps, for a total of $O(n^2)$.
+	- O(n) to find smallest value
+- Priority queues support finding smallest value in O(lg n) time
+	- implemented using heap or BST
+- Implement selection sort with a priority queue using heap (hence heapsort)
+- This gives us n iterations, with each iteration now taking lg n (instead of n/2)
+- Gives us $O(n \log n)$ (instead of $O(n^2)$ with unsorted array)
+
+### Heaps
