@@ -46,4 +46,3 @@ SelectionSort(A)
 - Gives us $O(n \log n)$ (instead of $O(n^2)$ with unsorted array)
 
 ### Heaps
-![[Pasted image 20251207192006.png]]
