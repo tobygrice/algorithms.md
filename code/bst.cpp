@@ -13,7 +13,7 @@ class BST {
     private:
         Node* root;
 
-        Node* recursive_search(int key, Node* node) {
+        Node* recursive_search(int key, Node* node) const {
             if (!node) {
                 return nullptr; // not found
             }
@@ -47,7 +47,7 @@ class BST {
             return node; // key == node (don't allow duplicate keys)
         }
 
-        void recursive_print(Node* node) {
+        void recursive_print(Node* node) const {
             if (!node) return;
             recursive_print(node->left);
             std::cout << node->key << " ";
@@ -70,7 +70,7 @@ class BST {
         BST(const BST&) = delete;
         BST& operator=(const BST&) = delete;
 
-        Node* search_key(int key) {
+        Node* search_key(int key) const {
             return recursive_search(key, root);
         }
         Node* insert_key(int key) {
@@ -81,7 +81,7 @@ class BST {
                 return recursive_insert(key, nullptr, root);
             }
         }
-        void print() {
+        void print() const {
             recursive_print(root);
             std::cout << std::endl;
         }
@@ -136,7 +136,7 @@ class BST {
 };
 
 int main(int argc, char** argv) {
-    BST tree;
+    BST tree; 
 
     return 0;
 }

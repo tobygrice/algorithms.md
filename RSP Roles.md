@@ -25,7 +25,7 @@ This role is for students who have completely finished studying the theory. Cong
 - [ ] Thoroughly read the first 13 chapters of ADM (don't do the exercises).
 	- [x] Chapter 01
 	- [x] Chapter 02
-	- [ ] Chapter 03
+	- [x] Chapter 03
 	- [ ] Chapter 04
 	- [ ] Chapter 05
 	- [ ] Chapter 06
@@ -38,7 +38,7 @@ This role is for students who have completely finished studying the theory. Cong
 	- [ ] Chapter 13
 - [ ] Implement in either C++ / Java / Python:
 	- [x] A Linked List.
-	- [ ] A Binary Tree.
+	- [x] A Binary Tree.
 	- [ ] A Graph using an Adjacency List.
 	- [ ] Depth First Search using recursion.
 	- [ ] Breadth First Search using a while loop. 

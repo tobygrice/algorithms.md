@@ -64,5 +64,54 @@ What to do with keys that hash to the same index?
 - Searching for a given key now involves going to the appropriate hash value and checking to see if the item there is the one we want. If so, return it. Otherwise we must keep checking through the length of the run. 
 - Deletion in an open addressing scheme can get ugly, since removing one element might break a chain of insertions, making some elements inaccessible. We have no alternative but to reinsert all the items in the run that follows the new hole.
 
-### Conclusion
 Hashing is a fundamental idea in randomized algorithms, yielding linear expected-time algorithms for problems that are Θ(n log n) or Θ(n^2) in the worst case.
+
+## Heaps
+*Defined in chapter 4.3.1*
+
+- maintain a partial order
+- a binary tree such that the key of each node dominates the keys of its children.
+	- min-heap: a node dominates its children by having a smaller key than they do
+	- max-heap: parent nodes dominate by being bigger
+- maintaining this as we would a binary tree uses a lot of memory for pointers (parent/left/right)
+- heap can be represented without any pointers using an array of keys ![[Pasted image 20251208120145.png]]
+- We store the root of the tree in the first position of the array, and its left and right children in the second and third positions, respectively. 
+- Scary maths:
+	- In general, we store the $2^{l−1}$ keys of the $l$th level of a complete binary tree from left to right in positions $2^{l−1}$ to $2^l−1$. 
+	- We assume that the array starts with index 1 to simplify matters
+- For a key at position $k$ **with 1-based counting**:
+	- Left child is at $2k$
+	- Right child is at $2k+1$
+	- Parent is at $\left\lfloor {k}/{2} \right\rfloor$
+- For a key at position $k$ **with 0-based counting**:
+	- Left child is at $2k + 1$
+	- Right child is at $2k+2$
+	- Parent is at $\left\lfloor \frac {k-1}{2} \right\rfloor$
+- To maintain these rules, we must represent a full binary tree
+	- a twig (essentially a linked list) would take a huge amount of space
+	- e.g. a twig with 8 elements (8 nodes stretching down to depth 8) would require an array of size $2^8-1=255$ to store 8 elements. 
+- Therefore, we do not allow holes: 
+	- all levels that are not the bottom level must be completely packed
+	- the bottom level is packed to the left
+	- therefore, $n$ elements are always represented in an array of size $n$
+- This implementation saves memory but is far less flexible than using pointers, so is not viable for a BST.
+
+### Implementation
+#### Insertion
+- Insert the new element at the back of the array: ($n+1$)st position
+- If the new element dominates its parent at $\left\lfloor {k}/{2} \right\rfloor$ (not allowed), swap it with its parent
+- then check again, does it dominate its new parent?
+	- recursively "bubble up" the tree
+- Tree height is $\left\lfloor \lg n \right\rfloor$, so insertion is $O(\lg n)$
+	- creating a tree of $n$ elements takes $O(n \lg n)$
+
+#### Deletion (only allowed from root)
+- Root is most dominant element
+- Remove root and replace with $n$th most element (last element in array)
+- If new root dominates both children, great! If not, swap with dominant child
+- Then check again, does it dominate both its new children?
+	- recursively "bubble down" the tree
+- Tree height is $\left\lfloor \lg n \right\rfloor$, so root deletion is $O(\lg n)$
+	- deleting all elements a tree of $n$ elements takes $O(n \lg n)$
+	- as each element is deleted in sorted order, this can be used to sort an array in $O(n \lg n)$ time
+	- this sorting algorithm is called [[Chapter 04 - Sorting#Heapsort|heapsort]]
