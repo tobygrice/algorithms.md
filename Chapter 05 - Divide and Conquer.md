@@ -35,7 +35,6 @@ We can do the same thing to find a root of a function
 ## Recurrence Relations
 An equation in which a function is defined in terms of itself
 - e.g. Fibonacci numbers: $F_n = F_{n−1} + F_{n−2}$
-*This gets very technical into time analysis, went over my head. Subchapters 5.3 and 5.4.*
 
 ### Master Theorem
 Divide-and-conquer recurrences of the form $T(n) = aT(n/b)+f(n)$ are generally easy to solve, because the solutions typically fall into one of three distinct cases
@@ -61,10 +60,31 @@ Then compare $f(n)$ to $g(n)$.
 	- *Case 3: Too expensive a root*
 	- Total runtime is $O(f(n))$.
 	- If the internal evaluation cost grows very rapidly with $n$, then the cost of the root evaluation may dominate everything. 
+An example of this can be seen below.
 
 ## Fast Multiplication
+Suppose each number has $n = 2m$ digits. Observe that we can split each number into two pieces each of $m$ digits, such that the product of the full numbers can easily be constructed from the products of the pieces, as follows. Let $w = 10^{m+1}$, and represent $A = a_0 + a_1w$ and $B = b_0 + b_1w$, where $a_i$ and $b_i$ are the pieces of each respective number. Then:
+$$A × B = (a_0 + a_1w) × (b_0 + b_1w) = a_0b_0 + a_0b_1w + a_1b_0w + a_1b_1w^2$$
+Karatsuba’s algorithm is an alternative recurrence for multiplication, which yields a better running time. Suppose we compute the following three products:
+![[Pasted image 20251209123917.png]]
+We divide the problem into 3 multiplications of size $n/2$, the combination (addition) of which takes $O(n)$ time. Therefore, the time complexity of this algorithm is governed by the recurrence:
+$$T(n)=3T(n/2) + O(n)$$
+To solve this, define the benchmark:
+$$g(n)=n^{log_{⁡b} a}=n^{log_{⁡2} 3}\approx n^{1.585}$$
+The benchmark $g(n)$ is less than $f(n)=O(n)$, so it fits *case 1* of the master theorem. 
+Therefore, runtime is $O(n^{1.585})$.
 
-a=7
-b=2
+## Largest Subrange and Closest Pair
+Say we want to find the largest subrange within the following array:
+$$[−17, 5, 3, −10, 6, 1, 4, −3, 8, 1, −13, 4]$$
+For a sample this small it is trivial, indexes 4 to 9 inclusive: $[6, 1, 4, −3, 8, 1]$
+But how do we find this algorithmically?
+The trivial solution is to check every subrange, which requires $O(n^2)$ time.
+There exists a divide-and-conquer algorithm that runs in $O(n \log n)$ time
 
-n^2.8
+We can divide the array $A$ into left and right halves. 
+- The largest subrange is either in the left half or the right half, or includes the middle. 
+- A recursive program to find the largest subrange between $A[l]$ and $A[r]$ can easily call itself to work on the left and right subproblems. 
+- The largest subrange spanning the middle will be the **union** of the largest subrange on the left ending on $m$, and the largest subrange on the right starting from $m+1$
+- Dividing $n$ into two halves, doing linear work, and recurring takes time $T(n)$, where $$T(n)=2 · T(n/2) + Θ(n)$$
+- Case 2 of the master theorem yields $T(n) = Θ(n \log n)$.

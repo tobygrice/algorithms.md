@@ -25,14 +25,14 @@
             "id": "7cd385bc8db36bd9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Chapter 05 - Divide and Conquer.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Chapter 05 - Divide and Conquer"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           },
           {
@@ -213,9 +213,10 @@
   },
   "active": "7cd385bc8db36bd9",
   "lastOpenFiles": [
+    "Pasted image 20251209123917.png",
+    "Chapter 05 - Divide and Conquer.md",
     "Chapter 03 - Data Structures.md",
     "Chapter 04 - Sorting.md",
-    "Chapter 05 - Divide and Conquer.md",
     "code/linked_list.cpp",
     "code/merge_sort.c",
     "code/merge_sort",
@@ -232,7 +233,6 @@
     "images/Pasted image 20251202174209.png",
     "images/Pasted image 20251124155403.png",
     "images/Pasted image 20251124154101.png",
-    "images/Pasted image 20251124104057.png",
     "images",
     "Welcome.md"
   ]
