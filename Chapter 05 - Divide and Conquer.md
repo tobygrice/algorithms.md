@@ -88,3 +88,6 @@ We can divide the array $A$ into left and right halves.
 - The largest subrange spanning the middle will be the **union** of the largest subrange on the left ending on $m$, and the largest subrange on the right starting from $m+1$
 - Dividing $n$ into two halves, doing linear work, and recurring takes time $T(n)$, where $$T(n)=2 · T(n/2) + Θ(n)$$
 - Case 2 of the master theorem yields $T(n) = Θ(n \log n)$.
+
+## Parallel Algorithms
+
