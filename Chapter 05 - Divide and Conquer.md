@@ -90,4 +90,17 @@ We can divide the array $A$ into left and right halves.
 - Case 2 of the master theorem yields $T(n) = Θ(n \log n)$.
 
 ## Parallel Algorithms
+Multiple processors are typically best deployed to exploit data parallelism, running a single algorithm on different and independent data sets.
 
+### Pitfalls
+- There is often a small upper bound on the potential win 
+	- often, even greater performance gains can often result from developing more eﬃcient sequential algorithms. 
+	- your time spent parallelising code might well be better spent enhancing the sequential version.
+- Speedup is meaningless if its measured against a poor sequential algorithm
+	- e.g. minimax game-tree search algorithm used in computer chess programs. 
+	- a brute-force tree search is embarrassingly easy to parallelise: just put each subtree on a diﬀerent processor.
+	- the more clever alpha–beta pruning algorithm can easily save 99.99% of the work, thus dwarfing any benefits of a parallel brute-force search. 
+	- Alpha–beta can be parallelised, but not easily, and the speedups grow surprisingly slowly as a function of the number of processors you have.
+- Parallel algorithms are tough to debug
+	- non-deterministic nature of inter-processor communication makes parallel programs notoriously difficult to debug
+- 

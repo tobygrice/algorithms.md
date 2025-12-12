@@ -26,9 +26,9 @@ This role is for students who have completely finished studying the theory. Cong
 	- [x] Chapter 01
 	- [x] Chapter 02
 	- [x] Chapter 03
-	- [ ] Chapter 04
-	- [ ] Chapter 05
-	- [ ] Chapter 06
+	- [x] Chapter 04
+	- [x] Chapter 05
+	- [x] Chapter 06
 	- [ ] Chapter 07
 	- [ ] Chapter 08
 	- [ ] Chapter 09
