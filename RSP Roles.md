@@ -1,9 +1,17 @@
+| 24 Nov         | Start of Program                                                 |
+| -------------- | ---------------------------------------------------------------- |
+| 24 Dec - 1 Jan | Optional Christmas / New Years Break.                            |
+| 4 Jan          | Beginner -> Novice promotion deadline                            |
+| 8 Feb          | Novice -> Intermediate promotion deadline                        |
+| 20 Feb         | End of Program                                                   |
+| 22 Feb         | BBQ Park Party (exclusively for students who finish the program) |
+
+
 When you do a leetcode, spend hours studying a problem until you understand it 100%
 - could take days
 - perfectly understand every leetcode problem solution before you move on
 - **learn and improve** from every mistake, don't just meet requirements
 - build relationships and connections with industry
-- 
 
 ## Purpose Of The Roles
 The primary method of tracking your progress throughout RSP will be through the use of roles. There are a lot of tasks for you to complete this summer, which can be both demotivating and exhausting, but the work can be made to feel easier when it’s broken into four distinct stages. The four roles of the Discord server represent these four stages, and they also function as your milestones.
@@ -29,7 +37,7 @@ This role is for students who have completely finished studying the theory. Cong
 	- [x] Chapter 04
 	- [x] Chapter 05
 	- [x] Chapter 06
-	- [ ] Chapter 07
+	- [x] Chapter 07
 	- [ ] Chapter 08
 	- [ ] Chapter 09
 	- [ ] Chapter 10
@@ -39,8 +47,8 @@ This role is for students who have completely finished studying the theory. Cong
 - [ ] Implement in either C++ / Java / Python:
 	- [x] A Linked List.
 	- [x] A Binary Tree.
-	- [ ] A Graph using an Adjacency List.
-	- [ ] Depth First Search using recursion.
+	- [x] A Graph using an Adjacency List.
+	- [x] Depth First Search using recursion.
 	- [ ] Breadth First Search using a while loop. 
 - [ ] Understand how these work and their big-O times:
 	- [ ] Trie data structure.

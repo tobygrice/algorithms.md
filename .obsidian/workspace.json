@@ -8,21 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "040cb6418b59862a",
+            "id": "23aaba4e11ef4e8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 07 - Graph Traversal.md",
+                "file": "Chapter 08 - Weighted Graph Algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 07 - Graph Traversal"
+              "title": "Chapter 08 - Weighted Graph Algorithms"
             }
           },
           {
-            "id": "fa6c535c3d464777",
+            "id": "351ce8870002d14c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -67,13 +67,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 07 - Graph Traversal.md",
+                "file": "Chapter 08 - Weighted Graph Algorithms.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Chapter 07 - Graph Traversal"
+              "title": "Outline of Chapter 08 - Weighted Graph Algorithms"
             }
           },
           {
@@ -196,16 +196,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "040cb6418b59862a",
+  "active": "23aaba4e11ef4e8b",
   "lastOpenFiles": [
-    "code/adjacency_list.cpp",
-    "Pasted image 20251212163448.png",
+    "code/prims.cpp",
     "RSP Roles.md",
+    "Chapter 08 - Weighted Graph Algorithms.md",
+    "Project Ideas.md",
     "Chapter 07 - Graph Traversal.md",
+    "code/Graph.h",
+    "code/dfs.cpp",
+    "code/formatting.c",
+    "images/Pasted image 20251215164456.png",
+    "images/Pasted image 20251215132152.png",
+    "images/Pasted image 20251212195034.png",
+    "images/Pasted image 20251212195022.png",
+    "code/adjacency_list.cpp",
+    "images/Pasted image 20251212163448.png",
     "Chapter 06 - Hashing and Randomised Algorithms.md",
     "images/Pasted image 20251212160328.png",
     "Chapter 03 - Data Structures.md",
-    "Project Ideas.md",
     "Chapter 05 - Divide and Conquer.md",
     "images/Pasted image 20251209123917.png",
     "Chapter 04 - Sorting.md",
@@ -218,10 +227,6 @@
     "Chapter 02 - Algorithm Analysis.md",
     "images/Pasted image 20251207192006.png",
     "image/Pasted image 20251207191857.png",
-    "images/Pasted image 20251205101449.png",
-    "images/Pasted image 20251205100444.png",
-    "images/Pasted image 20251202174218.png",
-    "images/Pasted image 20251202174209.png",
     "images",
     "Welcome.md"
   ]
