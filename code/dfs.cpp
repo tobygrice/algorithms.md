@@ -5,7 +5,7 @@
 enum STATE { UNDISCOVERED, DISCOVERED, PROCESSED };
 
 class DFS : public Graph {
-  private:
+private:
     STATE *state;
     int *entry;
     int *exit;
@@ -13,7 +13,7 @@ class DFS : public Graph {
 
     int time;
 
-  public:
+public:
     DFS(int size, bool directed)
         : Graph(size, directed),    // initialise base class first
           state(new STATE[nnodes]), // undiscovered, discovered, processed
@@ -46,11 +46,9 @@ class DFS : public Graph {
 
         process_vertex_early(u);
 
-        for (Edgenode *next_edge = edges[u]; next_edge;
-             next_edge = next_edge->next) {
+        for (Edgenode *next_edge = edges[u]; next_edge; next_edge = next_edge->next) {
             int v = next_edge->dest;
-            if (!directed && parent[u] == v)
-                continue; // skip edge back to parent in undirected graph
+            if (!directed && parent[u] == v) continue; // skip edge back to parent in undirected graph
 
             process_edge(u, v);
 
@@ -84,6 +82,5 @@ int main(int argc, char **argv) {
     std::cout << "Graph:\n";
     dfs.print_graph();
 
-    
     return 0;
 }

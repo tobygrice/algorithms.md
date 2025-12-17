@@ -1,6 +1,7 @@
 #include "Graph.h"
 #include <climits> // for INT_MAX
 #include <vector>
+#include <queue>
 
 int prims(Graph *g, Graph **mst, int start) {
     if (!g) return -1;
@@ -15,29 +16,29 @@ int prims(Graph *g, Graph **mst, int start) {
     std::vector<bool> intree(n, false);
     std::vector<int> distance(n, INT_MAX);
     std::vector<int> parent(n, -1);
+    
+    using Item = std::pair<int, int>; // (distance/key, vertex)
+    std::priority_queue<Item, std::vector<Item>, std::greater<Item>> pq;
 
     distance[start] = 0;
+    pq.push({0, start});
     int total_weight = 0;
 
-    while (true) {
+    while (!pq.empty()) {
         // pick next vertex to add
-        int v = -1;
-        int best = INT_MAX;
-        for (int i = 0; i < n; i++) {
-            if (!intree[i] && distance[i] < best) {
-                best = distance[i];
-                v = i;
-            }
-        }
-        if (v == -1 || best == INT_MAX)
-            break; // done / disconnected
+        // v is closest vertex, best is distance to v
+        auto [best, v] = pq.top();
+        pq.pop();
+
+        if (intree[v]) continue;
+        if (best != distance[v]) continue;
 
         intree[v] = true;
 
         // add chosen edge to MST (skip root)
         if (parent[v] != -1) {
-            (*mst)->insert_edge(parent[v] + 1, v + 1, distance[v]);
-            total_weight += distance[v];
+            (*mst)->insert_edge(parent[v] + 1, v + 1, best);
+            total_weight += best;
         }
 
         // relax edges out of v
@@ -46,6 +47,7 @@ int prims(Graph *g, Graph **mst, int start) {
             if (!intree[w] && p->weight < distance[w]) {
                 distance[w] = p->weight;
                 parent[w] = v;
+                pq.push({distance[w], w});
             }
         }
     }

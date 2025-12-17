@@ -59,8 +59,8 @@ This role is for students who have completely finished studying the theory. Cong
 	- [ ] Union-Find data structure.
 	- [ ] Quick Select algorithm.
 	- [ ] Balanced Binary Search Tree (both AVL and Red-Black Trees).
-	- [ ] Minimum Spanning Tree algorithm.
-	- [ ] Dijkstra’s Shortest Path algorithm.
+	- [x] Minimum Spanning Tree algorithm (prim's or kruskal's)
+	- [x] Dijkstra’s Shortest Path algorithm.
 	- [ ] Bellman-Ford pathfinding algorithm.
 - [ ] Fill out the table on page 32 of CTCI about behavioural questions (use dot points).
 - [ ] Read all interview question introductions from CTCI, which are the texts beyond page 86 that explain how to answer questions related to each respective data structure or algorithm.

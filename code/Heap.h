@@ -1,5 +1,7 @@
+#ifndef HEAP_H
+#define HEAP_H
+
 #include <iostream>
-#include <cstdlib> // rand for testing
 
 class MinHeap {
     private:
@@ -61,6 +63,9 @@ class MinHeap {
         }
 };
 
+#endif 
+
+/*
 int main(int argc, char** argv) {
     MinHeap mh(30);
     srand(time(NULL));
@@ -73,3 +78,4 @@ int main(int argc, char** argv) {
 
     return 0;
 }
+*/
