@@ -38,10 +38,10 @@ This role is for students who have completely finished studying the theory. Cong
 	- [x] Chapter 05
 	- [x] Chapter 06
 	- [x] Chapter 07
-	- [ ] Chapter 08
-	- [ ] Chapter 09
-	- [ ] Chapter 10
-	- [ ] Chapter 11
+	- [x] Chapter 08
+	- [x] Chapter 09
+	- [x] Chapter 10
+	- [x] Chapter 11
 	- [ ] Chapter 12
 	- [ ] Chapter 13
 - [ ] Implement in either C++ / Java / Python:

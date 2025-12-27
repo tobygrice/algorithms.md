@@ -16,10 +16,15 @@ Therefore, we talk in terms of simple upper and lower bounds, using Big Oh notat
 - The table below demonstrates that the algorithmic bounds are much more impactful than the size of `n`: ![[Pasted image 20251124155403.png]]
 
 ### Definitions
-We only need our function to provide a bound past some constant $n_0$. We don't care about performance for small $n$, only about performance with very large $n$.
+We only need our function to provide a bound past some constant $n_0$. We don't care about performance for small $n$, only about performance with very large $n$. Formally:
 1. $f(n) = O(g(n))$ means $c · g(n)$ is an upper bound on $f(n)$. Thus, there exists some constant $c$ such that $f(n) ≤ c · g(n)$ for every large enough $n$ (that is, for all $n ≥ n_0$, for some constant $n_0$). 
 2. $f(n) = \Omega (g(n))$ means $c · g(n)$ is a lower bound on $f(n)$. Thus, there exists some constant $c$ such that $f(n) ≥ c · g(n)$ for all $n ≥ n_0$. 
 3. $f(n) = \Theta (g(n))$ means $c_1 · g(n)$ is an upper bound on $f(n)$ and $c_2 · g(n)$ is a lower bound on $f(n)$, for all $n ≥ n_0$. Thus, there exist constants $c_1$ and $c_2$ $such$ that $f(n) ≤ c_1 · g(n)$ and $f(n) ≥ c_2 · g(n)$ for all $n ≥ n_0$. This means that $g(n)$ provides a nice, tight bound on $f(n)$.
+In plainer language (from CTCI):
+- $O$ (big O): In academia, big O describes an upper bound on the time. An algorithm that prints all the values in an array could be described as $O(N)$, but it could also be described as $O(N^2)$, $O(N^3)$, or $O(2^N)$ (or many other big O times). The algorithm is at least as fast as each of these; therefore they are upper bounds on the runtime. This is similar to a less-than-or-equal-to relationship. If Bob is X years old (I'll assume no one lives past age 130), then you could say $X \leq 130$. It would also be correct to say that $X \leq 1000$ or $X \leq 1000000$. It's technically true (although not terribly useful). Likewise, a simple algorithm to print the values in an array is $O(N)$ as well as $O(N^3)$ or any runtime bigger than $O(N)$. 
+- $\Omega$ (big omega): In academia, $\Omega$ is the equivalent concept but for lower bound. Printing the values in an array is $\Omega (N)$ as well as $\Omega (\log N)$ and $\Omega(1)$. After all, you know that it won't be faster than those runtimes. 
+- $\Theta$ (big theta): In academia, $\Theta$ means both $O$ and $\Omega$. That is, an algorithm is $\Theta (N)$ if it is **both** $O(N)$ and $\Omega(N)$. $\Theta$ gives a tight bound on runtime.
+In industry (and therefore in interviews), people seem to have merged $\Theta$ and $O$ together. Industry's meaning of big $O$ is closer to what academics mean by $\Theta$, in that it would be seen as incorrect to describe printing an array as $O(N^2)$. Industry would just say this is $O(N)$.
 ![[Pasted image 20251124154101.png]]
 
 All Big Oh problems can be correctly solved by going back to the definition and working with that. 

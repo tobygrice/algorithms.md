@@ -8,34 +8,49 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d75cd9e0726608a",
+            "id": "23aaba4e11ef4e8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cracking the Coding Interview.md",
+                "file": "Chapter 08 - Weighted Graph Algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cracking the Coding Interview"
+              "title": "Chapter 08 - Weighted Graph Algorithms"
             }
           },
           {
-            "id": "c14c3c3eda9bcd60",
+            "id": "351ce8870002d14c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 02 - Algorithm Analysis.md",
+                "file": "Chapter 08 - Weighted Graph Algorithms.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 02 - Algorithm Analysis"
+              "title": "Chapter 08 - Weighted Graph Algorithms"
+            }
+          },
+          {
+            "id": "f20b97e41824538c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chapter 09 - Combinatorial Search.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 09 - Combinatorial Search"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -67,13 +82,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cracking the Coding Interview.md",
+                "file": "Chapter 09 - Combinatorial Search.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Cracking the Coding Interview"
+              "title": "Outline of Chapter 09 - Combinatorial Search"
             }
           },
           {
@@ -113,12 +128,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 300
   },
   "right": {
     "id": "201966f7b62f35bf",
@@ -196,30 +210,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7d75cd9e0726608a",
+  "active": "f20b97e41824538c",
   "lastOpenFiles": [
-    "Chapter 02 - Algorithm Analysis.md",
-    "RSP Roles.md",
-    "Cracking the Coding Interview.md",
-    "Chapter 12 - Dealing with Hard Problems.md",
-    "Chapter 11 - NP-Completeness.md",
-    "Chapter 10 - Dynamic Programming.md",
-    "Untitled.md",
-    "images/Pasted image 20251223144321.png",
-    "images/Pasted image 20251223144226.png",
-    "Chapter 09 - Combinatorial Search.md",
-    "Chapter 08 - Weighted Graph Algorithms.md",
-    "Chapter 07 - Graph Traversal.md",
-    "Chapter 06 - Hashing and Randomised Algorithms.md",
-    "Chapter 05 - Divide and Conquer.md",
-    "Chapter 04 - Sorting.md",
-    "Chapter 03 - Data Structures.md",
-    "Chapter 01 - Introduction.md",
-    "images/Pasted image 20251223114652.png",
-    "images/Pasted image 20251219120041.png",
+    "Pasted image 20251219120041.png",
     "images/Pasted image 20251218183231.png",
     "images/Pasted image 20251218182216.png",
+    "Pasted image 20251218183231.png",
+    "Pasted image 20251218182216.png",
     "code/formatting.cpp",
+    "Chapter 10 - Dynamic Programming.md",
+    "Chapter 08 - Weighted Graph Algorithms.md",
+    "Chapter 09 - Combinatorial Search.md",
+    "RSP Roles.md",
+    "Chapter 07 - Graph Traversal.md",
     "code/bfs.cpp",
     "code/dijkstra.cpp",
     "code/Heap.h",
@@ -233,7 +236,15 @@
     "images/Pasted image 20251212195034.png",
     "images/Pasted image 20251212195022.png",
     "code/adjacency_list.cpp",
+    "images/Pasted image 20251212163448.png",
+    "Chapter 06 - Hashing and Randomised Algorithms.md",
+    "images/Pasted image 20251212160328.png",
+    "Chapter 03 - Data Structures.md",
+    "Chapter 05 - Divide and Conquer.md",
+    "Chapter 04 - Sorting.md",
     "code/linked_list.cpp",
+    "Chapter 01 - Introduction.md",
+    "Chapter 02 - Algorithm Analysis.md",
     "Welcome.md"
   ]
 }
