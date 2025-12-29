@@ -63,6 +63,6 @@ Multiplying by a function:
 	- $Θ(f(n)) · Θ(g(n)) → Θ(f(n) · g(n))$
 
 ### Logarithms
-Logarithms arise in any process where things are repeatedly halved.
+Logarithms arise in any process where things are repeatedly halved. When you see a problem where the number of elements in the problem space gets halved each time, that will likely be a $O(\log N)$ runtime.
 The base of the logarithm has no real impact on the growth rate.
 Logarithms cut any function down to size: $\log{n^2} = O(\log (n))$

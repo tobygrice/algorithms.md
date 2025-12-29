@@ -187,4 +187,158 @@ We only care about the dominant terms:
 - $O(5*2^N + 1000*N^{100})$ becomes $O(2^N)$.
 We might still have a sum in a runtime in terms of inputs. For example, the expression $O(B^2 + A)$ cannot be reduced (without some special knowledge of A and B).
 
-## Amortised Time
+### Amortised Time
+Best explained with an example:
+- An `ArrayList`, or a dynamically resizing array, allows you to have the benefits of an array while offering flexibility in size. 
+	- You won't run out of space in the `ArrayList` since its capacity will grow as you insert elements. 
+	- An `ArrayList` is implemented with an array. When the array hits capacity, the `ArrayList` class will create a new array with double the capacity and copy all the elements over to the new array. 
+- How do you describe the runtime of insertion? 
+	- This is a tricky question. The array could be full. If the array contains N elements, then inserting a new element will take O(N) time. You will have to create a new array of size 2N and then copy N elements over. 
+	- However, we also know that this doesn't happen very often. The vast majority of the time insertion will be in O(1) time. 
+	- We need a concept that takes both into account. 
+	- This is what amortized time does. It allows us to describe that, yes, this worst case happens every once in a while. But once it happens, it won't happen again for so long that the cost is "amortized."
+
+### Recursive Runtimes
+Consider a recursive implementation of Fibonacci:
+```C
+int f(int n) {
+	if (n <= 1) {
+		return n; // f(0) = 0, f(1) = 1
+	}
+	return f(n - 1) + f(n - 2)
+}
+```
+Each function spawns two children, so it creates a binary tree as follows:
+![[Pasted image 20251227162224.png]]
+This tree will have depth `n`. There will be $2^{N+1}-1$ nodes.
+
+**Try to remember this pattern.** When you have a recursive function that makes multiple calls, the runtime will often (but not always) look like $O(\text {branches} ^ \text {depth})$, where $\text {branches}$ is the number of times each recursive call branches. In this case, this gives us $O(2^N)$.
+
+
+### Other Examples
+Consider a nested loop that starts at `i+1`:
+```C
+void printUnorderedPairs(int[] array) {
+	for (int i = 0; i < array.length; i++) {
+		for (int j = i + 1; j < array.length; j++) {
+			print(array[i] + "," + array[j])
+		}
+	}
+}
+```
+The first time through j runs for N-1 steps. The second time, it's N-2 steps. Then N-3 steps. And so on. Therefore, the number of steps total is: $(N-1) + (N-2) + (N-3) + ... + 2 + 1$, which is the sum of 1 through N-1. This is equal to $\frac {N(N-1)} {2} = 0.5N^2 - 0.5N$, which is $O(N^2)$
+
+Another way to think about it:
+- Think about the number of iterations in the inner loop, for each value of `i`
+- `1,2,3,...,N-1`
+- The average value in this sequence is roughly $N/2$
+- Therefore, on average, $N/2$ operations are performed $N$ times
+- This is $O(N^2)$
+
+---
+
+Don't be afraid to use multiple variables if you need them.
+
+---
+
+Challenging example:
+```C
+void permutation(String str) {
+	permutation(str, "");
+}
+
+void permutation(String str, String prefix) {
+	if (str.length() == 0) {
+		System.out.println(prefix);
+	} else {
+		for (int i= 0; i < str.length(); i++) {
+			String rem = str.substring(0, i) + str.substring(i + 1);
+			permutation(rem, prefix + str.charAt(i));
+		}
+	}
+} 
+```
+How many times does permutation get called in its base case? 
+- If we were to generate a permutation, then we would need to pick characters for each "slot:' Suppose we had 7 characters in the string. In the first slot, we have 7 choices. Once we pick the letter there, we have 6 choices for the next slot. (Note that this is 6 choices for each of the 7 choices earlier.) Then 5 choices for the next slot, and so on. 
+- Therefore, the total number of options is 7 * 6 * 5 * 4 * 3 * 2 * 1, which is also expressed as 7! (7 factorial). 
+- This tells us that there are n! permutations. 
+- Therefore, permutation is called n! times in its base case (when prefix is the full permutation). 
+How many times does permutation get called before its base case? 
+- But, of course, we also need to consider how many times lines 9 through 12 are hit. 
+- Picture a large call tree representing all the calls. There are n! leaves, as shown above. 
+- Each leaf is attached to a path of length n. 
+- Therefore, we know there will be no more than $n * n!$ nodes (function calls) in this tree. 
+How long does each function call take? 
+- Executing line 7 takes O(n) time since each character needs to be printed. 
+- Line 10 and line 11 will also take O(n) time combined, due to the string concatenation. 
+- Observe that the sum of the lengths of `rem`, `prefix`, and `str.charAt(i)` will always be n. 
+- Each node in our call tree therefore corresponds to O(n) work. 
+What is the total runtime? 
+- Since we are calling permutation $O(n * n!)$ times (as an upper bound), and each one takes $O(n)$ time, the total runtime will not exceed $O (n^2 * {n}!)$ . 
+
+
+### Additional Problems
+*Seem like good practice for big O analysis. Page 55.*
+
+
+## Technical Questions
+Here's a list of the absolute, must-have knowledge:
+
+| Data Structures        | Algorithms           | Concepts                |
+| ---------------------- | -------------------- | ----------------------- |
+| Linked Lists           | Breadth-First Search | Bit Manipulation        |
+| Trees, Tries, & Graphs | Depth-First Search   | Memory (Stack vs. Heap) |
+| Stacks & Queues        | Binary Search        | Recursion               |
+| Heaps                  | Merge Sort           | Dynamic Programming     |
+| Vectors / ArrayLists   | Quick Sort           | Big O Time & Space      |
+| Hash Tables            |                      |                         |
+
+Hash tables are very important. For each of these topics, make sure you understand how to use and implement them and, where applicable, the space and time complexity.
+![[ctci-coding-skills.pdf]]
+
+### Process of Developing a Solution
+- Pay attention to all details and note them down if required
+	- It is unlikely your interviewer will provide a detail that is not necessary to the solution
+	- e.g. "Given two arrays that are sorted, find …"
+	- You probably need to know that the data is sorted
+- Create good examples. Examples should be: 
+	- sufficiently large
+	- specific (use real numbers/strings)
+	- not special case
+- State a brute force
+	- create a non-optimal, brute force solution
+	- you want your interview to know you can see the easy solution
+	- is a good starting point for optimisations
+- Optimise 
+	- **Look for any unused information.** Did your interviewer tell you that the array was sorted? How can you leverage that information? 
+	- **Use a fresh example.** Sometimes, just seeing a different example will unclog your mind or help you see a pattern in the problem. 
+	- **Solve it "incorrectly."** Just like having an inefficient solution can help you find an efficient solution, having an incorrect solution might help you find a correct solution. For example, if you're asked to generate a random value from a set such that all values are equally likely, an incorrect solution might be one that returns a semi-random value: Any value could be returned, but some are more likely than others. You can then think about why that solution isn't perfectly random. Can you rebalance the probabilities? 
+	- **Make time vs. space tradeoff.** Sometimes storing extra state about the problem can help you optimize the runtime. 
+	- **Precompute information.** Is there a way that you can reorganize the data (sorting, etc.) or compute some values upfront that will help save time in the long run? 
+	- **Use a hash table.** Hash tables are widely used in interview questions and should be at the top of your mind. 
+	- **Think about the best conceivable runtime.**
+- Walk through
+	- After developing algorithm, walk through it before implementing
+	- You can write pseudocode, but keep it *very* high level
+		- e.g. (1) search array (2) find biggest (3) insert in heap
+		- e.g. if p < q, move p, else move q
+		- Don't have code implemented in English - no for loops or anything
+- Implement
+	- Write modularised code
+		- e.g. If your algorithm uses a matrix initialized to `{{ 1, 2, 3 }, { 4, 5, 6 }, ...}` , don't waste your time writing this initialization code. Just pretend you have a function `initIncrementalMatrix(int m, int n)`.
+	- Use other classes/structs where appropriate. 
+		- If you need to return a list of start and end points from a function, you could do this as a two-dimensional array.
+		- It's better though to do this as a list of `StartEndPair` (or possibly `Range`) objects.
+		- You don't necessarily have to implement the class, just pretend it exists
+	- Use logical variable names
+		- Helps both you and the interviewer
+- Test
+	- **Start with a "conceptual" test.** A conceptual test means just reading and analysing what each line of code does. Think about it like you're explaining the lines of code for a code reviewer. Does the code do what you think it should do? 
+	- **Weird looking code.** Double check that line of code that says `x = length - 2`. Investigate that for loop that starts at `i = 1`. While you undoubtedly did this for a reason, it's really easy to get it just slightly wrong. 
+	- **Hot spots.** You've coded long enough to know what things are likely to cause problems. Base cases in recursive code. Integer division. Null nodes in binary trees. The start and end of iteration through a linked list. Double check that stuff.
+	- **Small test cases.** This is the first time we use an actual, specific test case to test the code. Don't use that nice, big 8-element array from the algorithm part. Instead, use a 3 or 4 element array. It'll likely discover the same bugs, but it will be much faster to do so. 
+	- **Special cases.** Test your code against null or single element values, the extreme cases, and other special cases.
+	- When you find bugs (and you probably will), you should of course fix them. But don't just make the first correction you think of. Instead, carefully analyse why the bug occurred and ensure that your fix is the best one.
+
+### Optimisation Techniques
+

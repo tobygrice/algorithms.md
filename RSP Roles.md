@@ -30,6 +30,14 @@ This role is for students who have completely finished studying the theory. Cong
 
 **Required tasks to be awarded this role**
 - [ ] Read all the introductory chapters (first 86 pages) of CTCI.
+	- [x] I. The Interview Process
+	- [x] II. Behind the Scenes
+	- [x] Ill. Special Situations
+	- [x] IV. Before the Interview
+	- [x] V. Behavioural Questions
+	- [x] VI. BigO
+	- [ ] VII. Technical Questions
+	- [ ] VIII. The Offer and Beyond
 - [ ] Thoroughly read the first 13 chapters of ADM (don't do the exercises).
 	- [x] Chapter 01
 	- [x] Chapter 02
@@ -49,10 +57,10 @@ This role is for students who have completely finished studying the theory. Cong
 	- [x] A Binary Tree.
 	- [x] A Graph using an Adjacency List.
 	- [x] Depth First Search using recursion.
-	- [ ] Breadth First Search using a while loop. 
+	- [x] Breadth First Search using a while loop. 
 - [ ] Understand how these work and their big-O times:
-	- [ ] Trie data structure.
-	- [ ] Vector amortised time.
+	- [x] Trie data structure.
+	- [x] Vector amortised time.
 	- [ ] Bit Manipulation.
 	- [ ] Singleton Design Pattern.
 	- [ ] Factory Design Pattern.

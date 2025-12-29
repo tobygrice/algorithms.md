@@ -9,7 +9,7 @@
  * Implemented using adjacency list.
  */
 class Graph {
-  public:
+public:
     struct Edgenode {
         int dest;
         int weight;
@@ -42,15 +42,9 @@ class Graph {
         delete[] degree;
     }
 
-    void insert_edge(int x, int y, int weight) {
-        insert_edge_recursive(x - 1, y - 1, weight, directed);
-    }
-    void insert_edge(int x, int y) {
-        insert_edge_recursive(x - 1, y - 1, 0, directed);
-    } // assume unweighted
-    void delete_edge(int x, int y) {
-        delete_edge_recursive(x - 1, y - 1, directed);
-    }
+    void insert_edge(int x, int y, int weight) { insert_edge_recursive(x - 1, y - 1, weight, directed); }
+    void insert_edge(int x, int y) { insert_edge_recursive(x - 1, y - 1, 0, directed); } // assume unweighted
+    void delete_edge(int x, int y) { delete_edge_recursive(x - 1, y - 1, directed); }
 
     void print_graph() {
         for (int i = 0; i < nnodes; i++) {
@@ -65,11 +59,10 @@ class Graph {
     }
 
     bool in_range(int v) const { return v >= 0 && v < nnodes; }
-  private:
 
+private:
     void insert_edge_recursive(int x, int y, int weight, bool directed) {
-        if (!in_range(x) || !in_range(y))
-            return; // out-of-bounds guard
+        if (!in_range(x) || !in_range(y)) return; // out-of-bounds guard
         Edgenode *new_edge = new Edgenode();
         new_edge->dest = y;
         new_edge->weight = weight;
@@ -87,8 +80,7 @@ class Graph {
     }
 
     void delete_edge_recursive(int x, int y, bool directed) {
-        if (!in_range(x) || !in_range(y))
-            return; // out-of-bounds guard
+        if (!in_range(x) || !in_range(y)) return; // out-of-bounds guard
         Edgenode *y_parent = edges[x];
         Edgenode *y_edge = edges[x];
 

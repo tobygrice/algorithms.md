@@ -106,7 +106,9 @@ Hashing is a fundamental idea in randomized algorithms, yielding linear expected
 	- creating a tree of $n$ elements takes $O(n \lg n)$
 
 #### Deletion (only allowed from root)
-- Root is most dominant element
+- The `heap` data structure is designed to pop (delete and return value) the most dominant element (min or max)
+	- Root is most dominant element
+	- Therefore, you can only delete the root from a heap, no other element
 - Remove root and replace with $n$th most element (last element in array)
 - If new root dominates both children, great! If not, swap with dominant child
 - Then check again, does it dominate both its new children?

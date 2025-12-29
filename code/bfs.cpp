@@ -26,7 +26,7 @@ void bfs(Graph *g, std::vector<int> **parent, int start) {
         q.pop();
         process_vertex_early(u);
 
-        for (Graph::Edgenode* e = g->edges[u]; e; e = e->next) {
+        for (Graph::Edgenode* e = g->edges[u]; e != nullptr; e = e->next) {
             int v = e->dest;
             process_edge(u, v);
             if (state[v] == STATE::UNDISCOVERED) {
