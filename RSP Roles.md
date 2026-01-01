@@ -61,15 +61,15 @@ This role is for students who have completely finished studying the theory. Cong
 - [ ] Understand how these work and their big-O times:
 	- [x] Trie data structure.
 	- [x] Vector amortised time.
-	- [ ] Bit Manipulation.
-	- [ ] Singleton Design Pattern.
-	- [ ] Factory Design Pattern.
-	- [ ] Union-Find data structure.
-	- [ ] Quick Select algorithm.
-	- [ ] Balanced Binary Search Tree (both AVL and Red-Black Trees).
+	- [x] Bit Manipulation.
+	- [x] Singleton Design Pattern.
+	- [x] Factory Design Pattern.
+	- [x] Union-Find data structure.
+	- [x] Quick Select algorithm.
+	- [x] Balanced Binary Search Tree (both AVL and Red-Black Trees).
 	- [x] Minimum Spanning Tree algorithm (prim's or kruskal's)
 	- [x] Dijkstra’s Shortest Path algorithm.
-	- [ ] Bellman-Ford pathfinding algorithm.
+	- [x] Bellman-Ford pathfinding algorithm.
 - [ ] Fill out the table on page 32 of CTCI about behavioural questions (use dot points).
 - [ ] Read all interview question introductions from CTCI, which are the texts beyond page 86 that explain how to answer questions related to each respective data structure or algorithm.
 - [ ] Completed a draft of your resume.

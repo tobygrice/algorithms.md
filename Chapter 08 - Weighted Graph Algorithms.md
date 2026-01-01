@@ -265,6 +265,10 @@ void floyd(adjacency_matrix *g) {
     int k;         /* intermediate vertex counter */
     int through_k; /* distance through vertex k */
     for (k = 1; k <= g->nvertices; k++) {
+	    // generate matrix k:
+	    // k = k-1
+	    // then for all A[i,j], check if it is better to go through k
+	    // A[i,j] = min( A[i,j], A[i,k]+A[k,j] )
         for (i = 1; i <= g->nvertices; i++) {
             for (j = 1; j <= g->nvertices; j++) {
                 through_k = g->weight[i][k] + g->weight[k][j];
