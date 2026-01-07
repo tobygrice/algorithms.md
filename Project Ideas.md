@@ -1,6 +1,12 @@
 - [ ] Finish NES emulator in C++
 - [ ] AES-256 encryption/decryption tool in Rust
 - [ ] Portfolio website
+	- Warehouse 
+		- Warehouse aisle, lights flicker on
+		- Scrolling moves you down the aisle
+		- Projects are 'crates' on the shelves, can be clicked on for more information
+		- On the wall at the back is 'about me' on a corkboard
+		- Super cool idea but crazy hard to implement
 - [ ] Stellar Science website
 - [ ] Online encrypted messaging service + frontend
 

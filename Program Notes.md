@@ -29,16 +29,16 @@ This role does not require any tasks to get started.  
 This role is for students who have completely finished studying the theory. Congratulations! At this stage, you will start doing regular LeetCodes and weekly mock interviews. From this point onwards, we expect you to complete 10 coding problems a week and 2 mock interviews a week. For LeetCode problems and mock interviews to be counted in this program, they must be recorded in the website.
 
 **Required tasks to be awarded this role**
-- [ ] Read all the introductory chapters (first 86 pages) of CTCI.
+- [x] Read all the introductory chapters (first 86 pages) of CTCI.
 	- [x] I. The Interview Process
 	- [x] II. Behind the Scenes
 	- [x] Ill. Special Situations
 	- [x] IV. Before the Interview
 	- [x] V. Behavioural Questions
 	- [x] VI. BigO
-	- [ ] VII. Technical Questions
-	- [ ] VIII. The Offer and Beyond
-- [ ] Thoroughly read the first 13 chapters of ADM (don't do the exercises).
+	- [x] VII. Technical Questions
+	- [x] VIII. The Offer and Beyond
+- [x] Thoroughly read the first 13 chapters of ADM (don't do the exercises).
 	- [x] Chapter 01
 	- [x] Chapter 02
 	- [x] Chapter 03
@@ -50,15 +50,15 @@ This role is for students who have completely finished studying the theory. Cong
 	- [x] Chapter 09
 	- [x] Chapter 10
 	- [x] Chapter 11
-	- [ ] Chapter 12
-	- [ ] Chapter 13
-- [ ] Implement in either C++ / Java / Python:
+	- [x] Chapter 12
+	- [x] Chapter 13
+- [x] Implement in either C++ / Java / Python:
 	- [x] A Linked List.
 	- [x] A Binary Tree.
 	- [x] A Graph using an Adjacency List.
 	- [x] Depth First Search using recursion.
 	- [x] Breadth First Search using a while loop. 
-- [ ] Understand how these work and their big-O times:
+- [x] Understand how these work and their big-O times:
 	- [x] Trie data structure.
 	- [x] Vector amortised time.
 	- [x] Bit Manipulation.
@@ -70,18 +70,18 @@ This role is for students who have completely finished studying the theory. Cong
 	- [x] Minimum Spanning Tree algorithm (prim's or kruskal's)
 	- [x] Dijkstra’s Shortest Path algorithm.
 	- [x] Bellman-Ford pathfinding algorithm.
-- [ ] Fill out the table on page 32 of CTCI about behavioural questions (use dot points).
-- [ ] Read all interview question introductions from CTCI, which are the texts beyond page 86 that explain how to answer questions related to each respective data structure or algorithm.
-- [ ] Completed a draft of your resume.
+- [x] Fill out the table on page 32 of CTCI about behavioural questions (use dot points).
+- [x] Read all interview question introductions from CTCI, which are the texts beyond page 86 that explain how to answer questions related to each respective data structure or algorithm.
+- [x] Completed a draft of your resume.
 
 ## Intermediate
 This role is for students who have made a serious step towards their internship interviews! You have done heaps of LeetCode, a handful of mock interviews, written your resume, filled your LinkedIn, have finished a personal project, or have completed some programming-related work experience.
 
 **Required tasks to be awarded this role**
 - Completed and understood the solutions for the following LeetCode problems:
-	- 15 Easy problems.
-	- 25 Medium problems.
-	- 10 Hard problems.
+	- 15 Easy problems (3 per week)
+	- 25 Medium problems (5 per week)
+	- 10 Hard problems (2 per week)
 - 10 Leetcode-style mock interviews as the interviewee.
 - 10 Leetcode-style mock interviews as the interviewer.
 - One personal project/work experience

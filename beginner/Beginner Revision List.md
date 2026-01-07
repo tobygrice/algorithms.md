@@ -8,20 +8,20 @@
 - dense / sparse graph
 - adjacency matrix and list
 - amortised
-> - deterministic
-> - augmenting
+- deterministic
+- augmenting
 - heuristic
 - Big O Upper
 - Big Θ theta
 - Big Ω Omega
-> - residual graph
-> - augmenting path
+- residual graph
+- augmenting path
 - P / NP / NP-hard / NP-complete
-> - Tabulation
+- Tabulation
 - Memoisation
 
 **Sorting:**
-quick, bubble, insertion, bucket, merge, ***selection***, heap.
+quick, bubble, insertion, bucket, merge, selection, heap.
 What is it? 
 ***What is it's time complexity in best average worst case?***
 What is the best/worst case and how do you avoid worst case?
@@ -114,8 +114,9 @@ How do you do topological sort on a tree in O(n) time?
 How do you find strongly connected components in a graph? what algos? 
 
 **Complexity Analysis:**
-What are the big Three? Big O omega Theta
+What are the big Three? Big O, Omega, Theta
 What is the master theorem? 
+
 Can you give me all big three for this pseudocode?
 
 **P / NP / NP-hard / NP-complete:**
