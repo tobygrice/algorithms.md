@@ -11,14 +11,10 @@
             "id": "3f76963e24aeb86e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "leetcode/b - medium/2002 - Maximum Product of the Length of Two Palindromic Subsequences.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2002 - Maximum Product of the Length of Two Palindromic Subsequences"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -182,26 +178,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0b8982ed0e34c1ef",
+  "active": "3f76963e24aeb86e",
   "lastOpenFiles": [
+    "leetcode/c - hard/0480 - Sliding Window Median.md",
+    "beginner/code/a.exe",
+    "beginner/code/compiles.cpp",
+    "Leetcode Problem Template.md",
+    "leetcode/a - easy/0021 - Merge Two Sorted Lists.md",
+    "Project Ideas.md",
+    "leetcode/a - easy/0088 - Merge Sorted Array.md",
+    "Mock Interview Notes.md",
+    "leetcode/b - medium/1630 - Arithmetic Subarrays.md",
+    "leetcode/a - easy/0283 - Move Zeroes.md",
+    "Novice Progression Tracker.md",
     "leetcode/b - medium/2745 - Construct the Longest New String.md",
+    "Program Notes.md",
+    "Leetcodes and Mocks.md",
     "leetcode/b - medium/2002 - Maximum Product of the Length of Two Palindromic Subsequences.md",
     "leetcode/b - medium/0080 - Remove Duplicates from Sorted Array II.md",
+    "leetcode/b - medium/0049 - Group Anagrams.md",
+    "leetcode/a - easy/0217 - Contains Duplicate.md",
     "leetcode/a - easy/3498 - Reverse Degree of a String.md",
     "leetcode/a - easy/1929 - Concatenation of Array.md",
-    "leetcode/a - easy/0283 - Move Zeroes.md",
     "leetcode/a - easy/0242 - Valid Anagram.md",
-    "leetcode/a - easy/0217 - Contains Duplicate.md",
-    "leetcode/b - medium/0049 - Group Anagrams.md",
-    "Mock Interview Notes.md",
+    "leetcode/a - easy/0001 - Two Sum.md",
     "leetcode/c - hard",
     "leetcode/b - medium",
     "leetcode/a - easy",
     "leetcode/easy.md",
-    "Leetcodes and Mocks.md",
-    "Novice Progression Tracker.md",
-    "Project Ideas.md",
-    "Program Notes.md",
     "adm/resources/Pasted image 20251124154101.png",
     "adm/resources/Pasted image 20251202174209.png",
     "adm/resources/Pasted image 20251208120145.png",
@@ -219,15 +223,7 @@
     "adm/resources/Pasted image 20251124155403.png",
     "beginner/code/Heap.h",
     "beginner/resources/ctci-soft-skills.pdf",
-    "beginner/code/a.exe",
-    "beginner/code/dijkstra.cpp",
     "adm/Chapter 06 - Hashing and Randomised Algorithms.md",
-    "beginner/Cracking the Coding Interview.md",
-    "adm/Chapter 02 - Algorithm Analysis.md",
-    "adm/Chapter 03 - Data Structures.md",
-    "beginner/Beginner Revision List.md",
-    "adm/Chapter 09 - Combinatorial Search.md",
-    "beginner/DSA Overview Notes.md",
-    "adm/Chapter 11 - NP-Completeness.md"
+    "beginner/Cracking the Coding Interview.md"
   ]
 }
