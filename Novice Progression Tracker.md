@@ -15,14 +15,14 @@
 - 2 mocks (give+take)
 
 **Week 1**
-- [ ] 3 leetcode easy
-- [ ] 5 leetcode medium
-- [ ] 2 leetcode hard
-- [ ] Mock with Caitlin @ 4pm 6/1
-- [ ] Mock with Dedeepya @ 6pm 7/1
-- [ ] Watch Sunday seminars
-	- [ ] Mock interviews
-	- [ ] Leetcodes
+- [x] 3 leetcode easy
+- [x] 5 leetcode medium
+- [x] 2 leetcode hard
+- [x] Mock with Caitlin @ 4pm 6/1
+- [x] Mock with Dedeepya @ 6pm 7/1
+- [x] Watch Sunday seminars
+	- [x] Mock interviews
+	- [x] Leetcodes
 
 **Week 2**
 - [ ] 3 leetcode easy

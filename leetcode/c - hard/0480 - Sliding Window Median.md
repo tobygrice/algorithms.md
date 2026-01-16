@@ -1,4 +1,4 @@
-*Time: XXX minutes*
+*Time: 164 minutes*
 
 ## Problem
 The **median** is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.
@@ -105,35 +105,41 @@ Attempt 3, using 2 `multiset`s:
 ```cpp
 class Solution {
 public:
+	// O(log k)
     void balance_sets(multiset<double>& l_set, multiset<double>& r_set) {
-        if (r_set.size() > l_set.size()) {
-            double r_min = *r_set.begin();
+        while (r_set.size() > l_set.size()) {
+            auto r_min = r_set.begin();
+            l_set.insert(*r_min);
             r_set.erase(r_min);
-            l_set.insert(r_min);
-        } else if (l_set.size() - r_set.size() > 1) {
-            double l_max = *l_set.rbegin();
+        } 
+        while (l_set.size() - r_set.size() > 1) {
+            auto l_max = prev(l_set.end());
+            r_set.insert(*l_max);
             l_set.erase(l_max);
-            r_set.insert(l_max);
         }
     }
-
+	
     vector<double> medianSlidingWindow(vector<int>& nums, int k) {
         int n = nums.size();
         vector<double> ans;
         ans.reserve(n);
         
         multiset<double> l_set, r_set;
+        
+        // build initial left set and right set O(k log k)
         vector<int> init_window(nums.begin(), nums.begin() + k);
         sort(init_window.begin(), init_window.end());
-
-        // build initial left set and right set
-        int i = 0;
-        int mid = (k % 2) ? k / 2 : (k / 2) + 1;
-        for (i; i < mid; i++) l_set.insert(init_window[i]);
-        for (i; i < k; i++) r_set.insert(init_window[i]);
+        int i;
+        int mid = k / 2;
+        for (i = 0; i < mid; i++) l_set.insert(init_window[i]);
+        for (i = i; i < k; i++) r_set.insert(init_window[i]);
         balance_sets(l_set, r_set);
         
+        // loop n-k times doing O(log k) work
+        // time complexity is O((n-k) log k)
+        // n dominates, so O(n log k)
         for (int l = 0, r = k; r <= n; l++, r++) {
+		    // calculate median O(1)
             double median;
             if (l_set.size() == r_set.size()) {
                 median = (*l_set.rbegin() + *r_set.begin()) / 2;
@@ -141,10 +147,10 @@ public:
                 median = *l_set.rbegin();
             }
             ans.push_back(median);
-
+			
             if (r >= n) break;
-
-            // remove left value
+			
+            // remove left value O(2 log k)
             auto ind_in_lset = l_set.find(nums[l]);
             if (ind_in_lset != l_set.end()) {
                 // element is in left set
@@ -154,23 +160,27 @@ public:
                 auto ind_in_rset = r_set.find(nums[l]);
                 r_set.erase(ind_in_rset);
             }
-
-            balance_sets(l_set, r_set);
-
-            // insert right value
-            if (nums[r] <= median) {
+			
+            balance_sets(l_set, r_set); // O(log k)
+			
+            // insert right value O(log k)
+            if (l_set.empty() || nums[r] <= *l_set.rbegin()) {
                 l_set.insert(nums[r]);
             } else {
                 r_set.insert(nums[r]);
             }
-
-            balance_sets(l_set, r_set);
+			
+            balance_sets(l_set, r_set); // O(log k)
         }
         return ans;
     }
 };
 ```
+
 ## Notes
+Solution 3 is $O(n \log k)$. There is a similar solution with the same time complexity, that uses a min heap and a max heap instead of two multisets. To remove elements from the heap as the window moves, we check each element against a multiset of elements 'to delete', and ignore it if it is in the set.
+
+---
 sorted list from i to j
 sorted list from i+1 to j+1 is the same, just need to insert j+1
 
@@ -222,12 +232,6 @@ else
 balance_sets(m1, m2);
 ```
 
-
----
-
-Multisets can be accessed by index. So everything above is useless.
-
-/*
 sorted list from i to j
 sorted list from i+1 to j+1 is the same, just need to insert j+1
 
@@ -238,15 +242,3 @@ then find median
 solution: two multisets
 m1 has lower half up to and including median
 m2 has upper half following median
-
----
-
-multisets can access by index, so everything above is useless.
-
-
-// // Accesing the element at index i
-// int i = 2;
-// double median = *next(s.begin(), i);
-
-
-*/

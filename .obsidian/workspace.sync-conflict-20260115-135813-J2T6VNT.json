@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "leetcode/c - hard/2509 - Cycle Length Queries in a Tree.md",
+                "file": "leetcode/2745 M - Construct the Longest New String.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2509 - Cycle Length Queries in a Tree"
+              "title": "2745 M - Construct the Longest New String"
+            }
+          },
+          {
+            "id": "3f76963e24aeb86e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "leetcode/c - hard/0480 - Sliding Window Median.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0480 - Sliding Window Median"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -99,8 +114,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,14 +196,8 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c706de693058f449",
+  "active": "3f76963e24aeb86e",
   "lastOpenFiles": [
-    "leetcode/c - hard/0042 - Trapping Rain Water.md",
-    "leetcode/c - hard/2509 - Cycle Length Queries in a Tree.md",
-    "Leetcode Problem Template.md",
-    "leetcode/c - hard/1028 - Recover a Tree From Preorder Traversal.md",
-    "leetcode/c - hard/0480 - Sliding Window Median.md",
-    "beginner/code/a.exe",
     "leetcode/a - easy/0009 - Palindrome Number.md",
     "beginner/Backtracking.md",
     "leetcode/b - medium/2434 - Using a Robot to Print the Lexicographically Smallest String.md",
@@ -199,9 +207,11 @@
     "leetcode/b - medium/1033 - Moving Stones Until Consecutive.md",
     "leetcode/a - easy/1512 - Number of Good Pairs.md",
     "leetcode/b - medium/0912 - Sort an Array.md",
+    "beginner/code/a.exe",
     "leetcode/a - easy/0169 - Majority Element.md",
     "leetcode/a - easy/0027 - Remove Element.md",
     "leetcode/a - easy/0014 - Longest Common Prefix.md",
+    "leetcode/c - hard/1028 - Recover a Tree From Preorder Traversal.md",
     "leetcode/b - medium/0435 - Non-overlapping Intervals.md",
     "Mock Interview Notes.md",
     "Leetcodes and Mocks.md",
@@ -211,6 +221,9 @@
     "leetcode/1929 E - Concatenation of Array.md",
     "leetcode/0049 M - Group Anagrams.md",
     "leetcode/0283 E - Move Zeroes.md",
+    "Novice Progression Tracker.md",
+    "Project Ideas.md",
+    "Program Notes.md",
     "adm/resources/Pasted image 20251124154101.png",
     "adm/resources/Pasted image 20251202174209.png",
     "adm/resources/Pasted image 20251208120145.png",
@@ -219,6 +232,7 @@
     "adm/resources/Pasted image 20251223144226.png",
     "adm/resources/Pasted image 20251205101449.png",
     "adm/resources/Pasted image 20251205100444.png",
+    "adm/Chapter 07 - Graph Traversal.md",
     "adm/resources/Pasted image 20251218183231.png",
     "beginner/resources/Pasted image 20251227162224.png",
     "beginner/code/Graph.h",

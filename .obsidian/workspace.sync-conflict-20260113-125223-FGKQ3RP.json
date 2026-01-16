@@ -8,49 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "23aaba4e11ef4e8b",
+            "id": "3f76963e24aeb86e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 08 - Weighted Graph Algorithms.md",
+                "file": "leetcode/b - medium/1040 - Moving Stones Until Consecutive II.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 08 - Weighted Graph Algorithms"
-            }
-          },
-          {
-            "id": "351ce8870002d14c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chapter 08 - Weighted Graph Algorithms.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 08 - Weighted Graph Algorithms"
-            }
-          },
-          {
-            "id": "f20b97e41824538c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chapter 09 - Combinatorial Search.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 09 - Combinatorial Search"
+              "title": "1040 - Moving Stones Until Consecutive II"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,13 +53,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 09 - Combinatorial Search.md",
+                "file": "DSA Overview Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Chapter 09 - Combinatorial Search"
+              "title": "Outline of DSA Overview Notes"
             }
           },
           {
@@ -132,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 267.5,
+    "collapsed": true
   },
   "right": {
     "id": "201966f7b62f35bf",
@@ -210,42 +182,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f20b97e41824538c",
+  "active": "3f76963e24aeb86e",
   "lastOpenFiles": [
-    "Chapter 12 - Dealing with Hard Problems.md",
-    "images/Pasted image 20251223114652.png",
-    "Pasted image 20251223114652.png",
-    "Chapter 11 - NP-Completeness.md",
-    "images/Pasted image 20251219120041.png",
-    "Pasted image 20251219120041.png",
-    "images/Pasted image 20251218183231.png",
-    "images/Pasted image 20251218182216.png",
-    "Pasted image 20251218183231.png",
-    "Pasted image 20251218182216.png",
-    "code/formatting.cpp",
-    "Chapter 10 - Dynamic Programming.md",
-    "Chapter 08 - Weighted Graph Algorithms.md",
-    "Chapter 09 - Combinatorial Search.md",
-    "RSP Roles.md",
-    "Chapter 07 - Graph Traversal.md",
-    "code/bfs.cpp",
-    "code/dijkstra.cpp",
-    "code/Heap.h",
-    "code/prims.cpp",
+    "leetcode/b - medium/1033 - Moving Stones Until Consecutive.md",
+    "leetcode/b - medium/1040 - Moving Stones Until Consecutive II.md",
+    "Leetcode Problem Template.md",
+    "leetcode/a - easy/1512 - Number of Good Pairs.md",
+    "leetcode/c - hard/0480 - Sliding Window Median.md",
+    "leetcode/b - medium/0912 - Sort an Array.md",
+    "beginner/code/a.exe",
+    "leetcode/a - easy/0169 - Majority Element.md",
+    "leetcode/a - easy/0027 - Remove Element.md",
+    "leetcode/a - easy/0014 - Longest Common Prefix.md",
+    "leetcode/c - hard/1028 - Recover a Tree From Preorder Traversal.md",
+    "leetcode/b - medium/0435 - Non-overlapping Intervals.md",
+    "Mock Interview Notes.md",
+    "Leetcodes and Mocks.md",
+    "leetcode/3498 E - Reverse Degree of a String.md",
+    "leetcode/2745 M - Construct the Longest New String.md",
+    "leetcode/2002 M - Maximum Product of the Length of Two Palindromic Subsequences.md",
+    "leetcode/1929 E - Concatenation of Array.md",
+    "leetcode/0049 M - Group Anagrams.md",
+    "leetcode/0283 E - Move Zeroes.md",
+    "Novice Progression Tracker.md",
     "Project Ideas.md",
-    "code/Graph.h",
-    "code/dfs.cpp",
-    "code/formatting.c",
-    "images/Pasted image 20251215164456.png",
-    "images/Pasted image 20251215132152.png",
-    "code/adjacency_list.cpp",
-    "Chapter 06 - Hashing and Randomised Algorithms.md",
-    "Chapter 03 - Data Structures.md",
-    "Chapter 05 - Divide and Conquer.md",
-    "Chapter 04 - Sorting.md",
-    "code/linked_list.cpp",
-    "Chapter 01 - Introduction.md",
-    "Chapter 02 - Algorithm Analysis.md",
-    "Welcome.md"
+    "Program Notes.md",
+    "adm/resources/Pasted image 20251124154101.png",
+    "adm/resources/Pasted image 20251202174209.png",
+    "adm/resources/Pasted image 20251208120145.png",
+    "beginner/code/prims.cpp",
+    "adm/resources/Pasted image 20251209123917.png",
+    "adm/resources/Pasted image 20251223144226.png",
+    "adm/resources/Pasted image 20251205101449.png",
+    "adm/resources/Pasted image 20251205100444.png",
+    "adm/Chapter 07 - Graph Traversal.md",
+    "adm/resources/Pasted image 20251218183231.png",
+    "beginner/resources/Pasted image 20251227162224.png",
+    "beginner/code/Graph.h",
+    "beginner/resources/ctci-coding-skills.pdf",
+    "Chapter 11 - NP-Completeness.md",
+    "adm/resources/Pasted image 20251124155403.png",
+    "beginner/code/Heap.h",
+    "beginner/resources/ctci-soft-skills.pdf",
+    "beginner/code/dijkstra.cpp",
+    "adm/Chapter 06 - Hashing and Randomised Algorithms.md",
+    "beginner/code/adjacency_list.cpp",
+    "beginner/Cracking the Coding Interview.md",
+    "beginner/code/bfs.cpp",
+    "beginner/code/dfs.cpp"
   ]
 }

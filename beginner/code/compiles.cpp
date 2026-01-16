@@ -1,92 +1,64 @@
-#include <algorithm>
-#include <set>
+#include <iostream>
 #include <vector>
+#include <algorithm> // for std::is_sorted
+#include <random>
+#include <sstream>
+#include <cassert>
+#include <string>
+#include <cstdlib>
+#include <unordered_map>
+#include <unordered_set>
+#include <queue>
+
+
 using namespace std;
-class Solution {
-public:
-    void balance_sets(multiset<double>& l_set, multiset<double>& r_set) {
-        if (r_set.size() > l_set.size()) {
-            double r_min = *r_set.begin();
-            r_set.erase(r_min);
-            l_set.insert(r_min);
-        } else if (l_set.size() + 1 > r_set.size()) {
-            double l_max = *l_set.rbegin();
-            l_set.erase(l_max);
-            r_set.insert(l_max);
+
+int trap(vector<int>& height) {
+    int n = height.size();
+
+    vector<pair<int, int>> tallest_wall_after(n);
+    for (int i = 0; i < n; i++) {
+        int elevation_between = 0;
+        int max_height = i + 1;
+        for (int j = i + 1; j < n; j++) {
+            if (height[j] >= height[i]) {
+                tallest_wall_after[i] = {j, elevation_between};
+                break;
+            } else if (height[j] >= height[max_height]) {
+                tallest_wall_after[i] = {j, elevation_between};
+                max_height = j;
+            } 
+            elevation_between += height[j];
         }
     }
 
-    vector<double> medianSlidingWindow(vector<int>& nums, int k) {
-        int n = nums.size();
-        vector<double> ans;
-        ans.reserve(n);
-        
-        multiset<double> l_set, r_set;
-        vector<int> init_window(nums.begin(), nums.begin() + k);
-        sort(init_window.begin(), init_window.end());
+    int total_capacity = 0;
+    int i = 0;
+    while (i < n - 1) {
+        int next_tallest_wall = tallest_wall_after[i].first;
+        int elevation_between = tallest_wall_after[i].second;
 
-        // build initial left set and right set
-        int i = 0;
-        int mid = (k % 2) ? k / 2 : (k / 2) + 1;
-        for (i; i < mid; i++) l_set.insert(init_window[i]);
-        for (i; i < k; i++) r_set.insert(init_window[i]);
-        
-        for (int l = 0, r = k; r <= n; l++, r++) {
-            double median;
-            if (l_set.size() == r_set.size()) {
-                median = (*l_set.rbegin() + *r_set.begin()) / 2;
-            } else {
-                median = *l_set.rbegin();
-            }
-            ans.push_back(median);
+        int width = (next_tallest_wall - i - 1);
+        // if (width < 0) width = 0;
+        int h_i = height[i];
+        int h_ntw = height[next_tallest_wall];
+        int height = min(h_i, h_ntw);
+        int capacity = (width * height) - elevation_between;
+        total_capacity += max(0, capacity);
 
-            if (r >= n) break;
+        cout << "From wall " << i << " to wall " << next_tallest_wall << endl;
+        cout << "Capacity = " << width << " * " << height << " - " << elevation_between 
+        << " = " << (width * height) - elevation_between << endl;
+        cout << "Current total = " << total_capacity << endl;
 
-            // remove left value
-            auto ind_in_lset = l_set.find(nums[l]);
-            if (ind_in_lset != l_set.end()) {
-                // element is in left set
-                l_set.erase(ind_in_lset);
-            } else {
-                // element is in right set
-                auto ind_in_rset = r_set.find(nums[l]);
-                r_set.erase(ind_in_rset);
-            }
-
-            balance_sets(l_set, r_set);
-
-            // insert right value
-            if (nums[r] <= median) {
-                l_set.insert(nums[r]);
-            } else {
-                r_set.insert(nums[r]);
-            }
-
-            balance_sets(l_set, r_set);
-        }
+        i = next_tallest_wall;
     }
-};
 
-/*
-sorted list from i to j
-sorted list from i+1 to j+1 is the same, just need to insert j+1
+    return total_capacity;
+}
 
-can use multiset, remove value at i and insert value at j
-then find median
-- finding median is harder, cannot index into multiset, need to perform n/2 iterations through the set
-
-solution: two multisets
-m1 has lower half up to and including median
-m2 has upper half following median
-
----
-
-multisets can access by index, so everything above is useless.
-
-
-// // Accesing the element at index i
-// int i = 2;
-// double median = *next(s.begin(), i);
-
-
-*/
+int main() {
+    vector<int> height = {0,1,0,2,1,0,1,3,2,1,2,1};
+    cout << trap(height) << endl;
+    return 0;
+}
